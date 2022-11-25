@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Header from "./header";
 import Services from "./services";
@@ -14,42 +13,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav>
-        <ul className="flex gap-4 justify-center">
-          <Link href="#header">
-            <li>Home</li>
-          </Link>
-          <Link href="#service">
-            <li>Service</li>
-          </Link>
-          <Link href="/login">
-            <li>Login</li>
-          </Link>
-        </ul>
-      </nav>
-
       {/* <main className={styles.main}> */}
       <Header id="header"></Header>
       <Services id="service"></Services>
       {/* </main> */}
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image
-              src="/michael-dale.png"
-              alt="Vercel Logo"
-              width={72}
-              height={16}
-            />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }
